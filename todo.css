@@ -1,0 +1,151 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(139, 0, 0, 0.3);
+}
+
+h1 {
+    color: #ff4444;
+    border-bottom: 2px solid #5a0000;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #ff6666;
+    margin-top: 0;
+}
+
+.task-section {
+    min-height: 50px;
+    margin-bottom: 30px;
+}
+
+.section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #2a2a2a;
+    border-left: 4px solid #444;
+    border-radius: 4px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+#todo-section .section {
+    border-left-color: #8b0000;
+    background: #2a1a1a;
+}
+
+#in-progress-section .section {
+    border-left-color: #b30000;
+    background: #2a1e1e;
+}
+
+#done-section .section {
+    border-left-color: #660000;
+    background: #1a1a1a;
+}
+
+.move-btn, .delete-btn, #add-task-btn {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 5px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.move-btn {
+    background-color: #8b0000;
+    color: #ffcccc;
+}
+
+.move-btn:hover {
+    background-color: #b30000;
+}
+
+#in-progress-section .move-btn {
+    background-color: #b30000;
+}
+
+#in-progress-section .move-btn:hover {
+    background-color: #d90000;
+}
+
+.delete-btn {
+    background-color: #330000;
+    color: #ff9999;
+}
+
+.delete-btn:hover {
+    background-color: #5a0000;
+}
+
+.add-task {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 10px;
+    align-items: center;
+}
+
+#new-task-title, #new-task-desc {
+    padding: 8px;
+    border: 1px solid #5a0000;
+    border-radius: 4px;
+    background: #2a2a2a;
+    color: #e0e0e0;
+}
+
+#new-task-title {
+    grid-column: 1;
+}
+
+#new-task-desc {
+    grid-column: 2;
+}
+
+#add-task-btn {
+    grid-column: 3;
+    background-color: #5a0000;
+    color: #ff9999;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    height: 100%;
+}
+
+#add-task-btn:hover {
+    background-color: #8b0000;
+}
+
+.section:hover {
+    background: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(139, 0, 0, 0.2);
+}
+
+p {
+    margin: 8px 0;
+    color: #bbb;
+}
+
+::placeholder {
+    color: #777;
+}
