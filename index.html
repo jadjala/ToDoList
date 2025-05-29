@@ -3,71 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Red To-Do List</title>
+    <title>Social To-Do List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="todo.css">
 </head>
 <body>
-    <div class="container">
-        <h1>To Do</h1>
-        <div class="add-task">
-            <input type="text" id="new-task-title" placeholder="Task title...">
-            <input type="text" id="new-task-desc" placeholder="Task description...">
-            <button id="add-task-btn">Add Task</button>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-tasks"></i>
+                <span>JustDoIt</span>
+            </div>
+           
+        </header>
+
+        <div class="main-content">
+            <div class="sidebar">
+                <div class="sidebar-section">
+                    <div class="sidebar-title">Menu</div>
+                    <div class="sidebar-item active">
+                        <i class="fas fa-home"></i>
+                        <span>My Tasks</span>
+                    </div>
+                   
+                </div>
+                
+            </div>
+
+            <div class="task-board">
+                <div class="task-column">
+                    <div class="column-header">
+                        <div class="column-title">To Do</div>
+                        <div class="task-count">3</div>
+                    </div>
+                    <div class="task-list">
+                        <div class="task-card todo" data-id="1">
+                            <div class="task-title">Complete BPM project</div>
+                            <div class="task-desc">Finish the introduction and the conclusion.</div>
+                            <div class="task-meta">
+                                <div class="task-deadline">Due May 31</div>
+                                <div class="task-project">BPM Project</div>
+                            </div>
+                            <div class="task-actions">
+                                <button class="task-btn move" data-target="in-progress">
+                                    <i class="fas fa-arrow-right"></i>
+                                    Move
+                                </button>
+                                <button class="task-btn delete">
+                                    <i class="fas fa-trash"></i>
+                                    Delete
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card todo" data-id="2">
+                            <div class="task-title">Do subnetting assignment</div>
+                            <div class="task-desc">Ask classmate for reference. Deadline: May 31, 2025.</div>
+                            <div class="task-meta">
+                                <div class="task-deadline">Due May 31</div>
+                                <div class="task-project">Subnetting</div>
+                            </div>
+                            <div class="task-actions">
+                                <button class="task-btn move" data-target="in-progress">
+                                    <i class="fas fa-arrow-right"></i>
+                                    Move
+                                </button>
+                                <button class="task-btn delete">
+                                    <i class="fas fa-trash"></i>
+                                    Delete
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card todo" data-id="3">
+                            <div class="task-title">Make infographics PEE</div>
+                            <div class="task-desc">Deadline: May 30, 2025</div>
+                            <div class="task-meta">
+                                <div class="task-deadline urgent">Due Tomorrow</div>
+                                <div class="task-project">PEE Infographics</div>
+                            </div>
+                            <div class="task-actions">
+                                <button class="task-btn move" data-target="in-progress">
+                                    <i class="fas fa-arrow-right"></i>
+                                    Move
+                                </button>
+                                <button class="task-btn delete">
+                                    <i class="fas fa-trash"></i>
+                                    Delete
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="task-column">
+                    <div class="column-header">
+                        <div class="column-title">In Progress</div>
+                        <div class="task-count">2</div>
+                    </div>
+                    <div class="task-list">
+                        <div class="task-card in-progress" data-id="4">
+                            <div class="task-title">Make logical end for final project</div>
+                            <div class="task-desc">Finish on thursday May 29, 2025.</div>
+                            <div class="task-meta">
+                                <div class="task-deadline urgent">Due Today</div>
+                                <div class="task-project">BPM Project</div>
+                            </div>
+                            <div class="task-actions">
+                                <button class="task-btn complete" data-target="done">
+                                    <i class="fas fa-check"></i>
+                                    Complete
+                                </button>
+                                <button class="task-btn delete">
+                                    <i class="fas fa-trash"></i>
+                                    Delete
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card in-progress" data-id="5">
+                            <div class="task-title">Write TcW activities</div>
+                            <div class="task-desc">Email all activities to the professor.</div>
+                            <div class="task-meta">
+                                <div class="task-deadline">Due June 2</div>
+                                <div class="task-project">Other</div>
+                            </div>
+                            <div class="task-actions">
+                                <button class="task-btn complete" data-target="done">
+                                    <i class="fas fa-check"></i>
+                                    Complete
+                                </button>
+                                <button class="task-btn delete">
+                                    <i class="fas fa-trash"></i>
+                                    Delete
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="task-column">
+                    <div class="column-header">
+                        <div class="column-title">Done</div>
+                        <div class="task-count">2</div>
+                    </div>
+                    <div class="task-list">
+                        <div class="task-card done" data-id="6">
+                            <div class="task-title">Conduct interview</div>
+                            <div class="task-desc">BPM final project. Interview A1 Dental Clinic for the business analyzation.</div>
+                            <div class="task-meta">
+                                <div class="task-deadline">Completed May 28</div>
+                                <div class="task-project">BPM Project</div>
+                            </div>
+                            <div class="task-actions">
+                                <button class="task-btn delete">
+                                    <i class="fas fa-trash"></i>
+                                    Delete
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="task-card done" data-id="7">
+                            <div class="task-title">Meeting to assign parts in IM final project</div>
+                            <div class="task-desc">Meeting date and time: May 23, 2025 - 2:00 PM</div>
+                            <div class="task-meta">
+                                <div class="task-deadline">Completed May 23</div>
+                                <div class="task-project">IM Project</div>
+                            </div>
+                            <div class="task-actions">
+                                <button class="task-btn delete">
+                                    <i class="fas fa-trash"></i>
+                                    Delete
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="todo-section" class="task-section">
-            <div class="section" data-id="1">
-                <h2>Complete BPM project</h2>
-                <p>Finish the introduction and the conclusion.</p>
-                <button class="move-btn" data-target="in-progress">Move to In Progress</button>
-                <button class="delete-btn">Delete</button>
-            </div>
-            
-            <div class="section" data-id="2">
-                <h2>Do subnetting assignment</h2>
-                <p>Ask classmate for reference. Deadline: May 31, 2025.</p>
-                <button class="move-btn" data-target="in-progress">Move to In Progress</button>
-                <button class="delete-btn">Delete</button>
-            </div>
-            
-            <div class="section" data-id="3">
-                <h2>Make infographics PEE</h2>
-                <p>Deadline: May 30, 2025</p>
-                <button class="move-btn" data-target="in-progress">Move to In Progress</button>
-                <button class="delete-btn">Delete</button>
-            </div>
-        </div>
-        
-        <h1>In Progress</h1>
-        <div id="in-progress-section" class="task-section">
-            <div class="section" data-id="4">
-                <h2>Make logical end for final project</h2>
-                <p>Finish on thursday May 29, 2025.</p>
-                <button class="move-btn" data-target="done">Move to Done</button>
-                <button class="delete-btn">Delete</button>
-            </div>
-            
-            <div class="section" data-id="5">
-                <h2>Write TcW activities</h2>
-                <p>Email all activities to the professor.</p>
-                <button class="move-btn" data-target="done">Move to Done</button>
-                <button class="delete-btn">Delete</button>
-            </div>
-        </div>
-        
-        <h1>Done</h1>
-        <div id="done-section" class="task-section">
-            <div class="section" data-id="6">
-                <h2>Conduct interview</h2>
-                <p>BPM final project</p>
-                <p>Interview A1 Dental Clinic for the business analyzation.</p>
-                <button class="delete-btn">Delete</button>
-            </div>
-            
-            <div class="section" data-id="7">
-                <h2>Meeting to assign parts in IM final project</h2>
-                <p>Meeting date and time: May 23, 2025 - 2:00 PM</p>
-                <button class="delete-btn">Delete</button>
-            </div>
+
+        <div class="add-task-form">
+            <h3>Add New Task</h3>
+            <form id="task-form">
+                <div class="form-group">
+                    <label class="form-label" for="task-title">Title</label>
+                    <input type="text" id="task-title" class="form-input" placeholder="What needs to be done?">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="task-desc">Description</label>
+                    <textarea id="task-desc" class="form-input" rows="3" placeholder="Add details..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="task-project">Project</label>
+                    <select id="task-project" class="form-input">
+                        <option value="BPM Project">Business Process Management</option>
+                        <option value="Database Management System">Database Management System</option>
+                        <option value="PEE Infographics">PEE</option>
+                        <option value="GSPS">GSPS</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="task-deadline">Deadline</label>
+                    <input type="date" id="task-deadline" class="form-input">
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-plus"></i>
+                    Add Task
+                </button>
+            </form>
         </div>
     </div>
 
